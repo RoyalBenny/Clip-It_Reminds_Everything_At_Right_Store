@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pendingDirectory.PendingActivity"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    >
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:background="@color/white"
+         android:fitsSystemWindows="true"
+         android:layout_gravity="center"
+         >
+          <android.support.v7.widget.Toolbar
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:fitsSystemWindows="true"
+              android:background="@color/material_new_blue_strong_200"
+              app:title="@string/app_name"
+              android:elevation="4dp"
+              android:paddingStart="25dp"
+              android:paddingEnd="0dp"
+              app:titleTextColor="@color/white"
+              />
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="30dp"
+              android:background="@drawable/toolbar_shadow"
+              android:layout_marginTop="-24dp"
+              />
+          <ExpandableListView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/expandable_list_view_at_pending_intent"
+              android:groupIndicator="@null"
+              android:background="@color/white"
+              android:divider="@color/white"
+              android:childDivider="@color/white"
+              />
+
+
+
+
+
+     </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

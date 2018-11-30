@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/delete_card_on_long_click"
+        android:title="@string/delete"
+        android:icon="@drawable/ic_delete_black_24dp"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/send_card_on_long_click"
+        android:title="@string/send"
+        android:icon="@drawable/ic_send_black_24dp"
+        app:showAsAction="always"
+        />
+    <item
+        android:icon="@drawable/ic_outline_share_24px"
+        android:title="@string/share"
+        android:id="@+id/share_card_on_long_click"
+        app:showAsAction="always"
+        />
+    <item
+        android:icon="@drawable/ic_archive_black_24dp"
+        android:title="@string/archive"
+        android:id="@+id/archive_on_long_click"
+        app:showAsAction="always"
+        />
+
+
+</menu>

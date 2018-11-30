@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeDirectory.HomeFragmet"
+    android:fitsSystemWindows="true"
+    android:background="@color/material_strong_grey_10"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+
+        <ExpandableListView
+            android:id="@+id/expandable_list_view_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material_strong_grey_10"
+            android:divider="@color/material_new_grey_strong_100"
+            android:childDivider="@color/white"
+            android:descendantFocusability="afterDescendants"
+            android:groupIndicator="@null"
+            android:stateListAnimator="@anim/zoon_in"
+            android:hapticFeedbackEnabled="true"
+          />
+
+</FrameLayout>

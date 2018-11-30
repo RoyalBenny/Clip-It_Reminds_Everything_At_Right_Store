@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messageDirectory.MessageViewDetail"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_at_message_detail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="4dp"
+        android:background="@color/material_strong_violet_50"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_shadow"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_marginTop="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        app:cardElevation="0dp"
+        >
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            >
+            <TextView
+                android:id="@+id/letter_view_in_message_detail"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/round_letter_view"
+                android:text="@string/r"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="20dp"
+                >
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/senderNameView_in_message_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sender_name"
+                    android:textColor="@color/material_new_brown_strong_50"
+                    android:textSize="17sp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="end|bottom"
+                android:padding="10dp"
+                >
+                <ImageView
+                    android:id="@+id/seenView_in_message_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/selector_for_seen"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/icon_for_sender"
+                    />
+
+                <TextView
+                    android:id="@+id/timeView_in_message_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/time"
+                    android:maxLength="6"
+                    android:textSize="13sp"
+                    android:textColor="@color/material_new_brown_strong_20"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_marginTop="-2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/materialGrey"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_at_message"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/material_new_brown_strong_20"
+            />
+
+        <TextView
+            android:id="@+id/messageView_in_message_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_it"
+            android:textColor="@color/material_new_brown_strong_50"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:maxLength="25"
+            android:textSize="17sp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="-2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/materialGrey"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/message_text_view_at_message_detail"
+        android:layout_margin="10dp"
+        android:text="@string/money"
+        android:textIsSelectable="true"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        />
+
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginDirectory.InstructionActivity"
+    android:background="@color/white"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="56dp"
+        app:navigationIcon="@drawable/ic_arrow_black"
+        android:id="@+id/tool_bar_at_instruction"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/instructions"
+        android:textSize="24sp"
+        android:textColor="@color/material_new_blue_strong_200"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_read_the_instructions_for_proper_working_of_clip_it"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textColor="@color/material_new_grey_strong_100"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/this_application_does_not"
+        android:padding="25dp"
+        android:textSize="15sp"
+        android:textColor="@color/material_new_grey_strong_100"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="300dp"
+        android:textAlignment="center"
+        android:paddingEnd="20dp"
+        android:paddingStart="30dp"
+        android:textColor="@color/material_new_brown_strong_50"
+        android:textStyle="bold"
+        android:text="@string/phone_settings_installed"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="390dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/no_restrict_image"
+        android:contentDescription="@string/no_restrications_image" />
+    <android.support.design.button.MaterialButton
+        android:id="@+id/instruction_agree_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/new_material_strong_blue_100"
+        android:text="@string/agree"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        app:icon="@drawable/ic_outline_thumb_up_24px"
+        app:iconTint="@color/white"
+        app:cornerRadius="4dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

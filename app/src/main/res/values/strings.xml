@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name">Clip-It</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="start_service">Create New</string>
+    <string name="stop_service">View</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="place">Place</string>
+    <string name="item">Item</string>
+    <string name="new_cat">New</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="service_start">Service Start</string>
+    <string name="stop_service_button">Stop Service</string>
+    <string name="category_expand">Category</string>
+    <string name="location_expand">Location</string>
+    <string name="title_activity_tabbed_view_for_bottom_sheet">TabbedViewActivityForBottomSheet
+    </string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tabbed_view_bottom_sheet">TabbedViewBottomSheet</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="today">Today</string>
+    <string name="resend_sms">Resend SMS</string>
+    <string name="time_end">0:00</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="image_at_flash">Image_at_flash</string>
+    <string name="instructions">Instructions</string>
+    <string name="please_read_the_instructions_for_proper_working_of_clip_it">Please read the instructions for proper working of Clip-It.</string>
+    <string name="this_application_does_not">This application does not work in battery saver mode and restriction modes by phone itself. To enjoy this app please remove restrictions of applications from phone settings.  Example :-</string>
+    <string name="phone_settings_installed"><![CDATA[Phone Settings > Installed apps / App Management > Clip-It > Battery saver > No restrictions / Allow Background Process]]></string>
+    <string name="no_restrications_image">no_restrications_image</string>
+    <string name="agree">Agree</string>
+    <string name="verify_your_phone_number">Verify your phone number</string>
+    <string name="to_login_please_enter_phone_no">To login please enter your phone number(carrier charges may apply).</string>
+    <string name="_93">+ 93</string>
+    <string name="phone_number">phone number</string>
+    <string name="skip_login">Skip Login!</string>
+    <string name="next">NEXT</string>
+    <string name="welcome_to_clip_it">Welcome to Clip-It</string>
+    <string name="we_are_happy_to_invite_you_to_our_family">We are happy to invite you to our family</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="image_at_login">image_at_login</string>
+    <string name="message">Message</string>
+    <string name="r">R</string>
+    <string name="sender_name">Roval Benny</string>
+    <string name="icon_for_sender">icon_for_sender</string>
+    <string name="time">15 Nov | 10:45 AM</string>
+    <string name="message_at_message">Message :</string>
+    <string name="buy_it">Buy it!</string>
+    <string name="money">Money</string>
+    <string name="from">From :</string>
+    <string name="me">Me</string>
+    <string name="to">To :</string>
+    <string name="enter_the_phone_number">Enter the phone number</string>
+    <string name="items">Items</string>
+    <string name="verification">Verification</string>
+    <string name="waiting_to_automatically_detect_an_sms">Waiting to automatically detect an SMS sent to given number.</string>
+    <string name="star">*** ***</string>
+    <string name="resend_image">resend_image</string>
+    <string name="_1_30">1:30</string>
+    <string name="complete_profile">Complete profile</string>
+    <string name="this_is_your_first_login">This is your first login. So please give your name.</string>
+    <string name="profile_icon">profile_icon</string>
+    <string name="name">Name</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="settings">Settings</string>
+    <string name="user_name">User Name</string>
+    <string name="background">Background</string>
+    <string name="this_settings_maintain_all_background_n_process_when_this_settings_is_off_the_n_clip_it_could_not_properly">This settings maintain all background \n  process.When this settings is off the \n Clip-It could not properly.</string>
+    <string name="do_not_disturb">Do not disturb</string>
+    <string name="change_the_time">Change the repeating time of notifications.</string>
+    <string name="_60_min">60 min</string>
+    <string name="searching">Searching</string>
+    <string name="this_changes_the_searching_radius">This changes the searching radius for \n stores at decide location.</string>
+    <string name="_1500_m">1500 m</string>
+    <string name="tracking">Tracking</string>
+    <string name="to_set_the_distance_from">To set the notifying distance \nbetween store and user.</string>
+    <string name="version">Version</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="about">About</string>
+    <string name="this_app_is_developed">This app is developed for IEEE MADC by COSMOS group.</string>
+    <string name="map">Map</string>
+    <string name="category_icon">category_icon</string>
+    <string name="hospital">Hospital</string>
+    <string name="create_new">create_new</string>
+    <string name="clip_it">CLIP-IT</string>
+    <string name="fever">Fever</string>
+    <string name="place_dot">Place..</string>
+    <string name="category_image">category image</string>
+    <string name="school">SCHOOL</string>
+    <string name="pencil">Pencil</string>
+    <string name="_22_oct_2018">22-OCT-2018</string>
+    <string name="reset_button">reset button</string>
+    <string name="reset_button_image">reset button image</string>
+    <string name="seen_image">seen image</string>
+    <string name="monday">Monday</string>
+    <string name="expand_icon">expand icon</string>
+    <string name="refresh_button">refresh button</string>
+    <string name="atm">ATM</string>
+    <string name="location_icon">location icon</string>
+    <string name="home">Home</string>
+    <string name="inbox">Inbox</string>
+    <string name="recents">Recents</string>
+    <string name="archive">Archive</string>
+    <string name="more">More</string>
+    <string name="logout">Logout</string>
+    <string name="bottom_sheet">Bottom Sheet</string>
+    <string name="bank">BANK</string>
+    <string name="bar">BAR</string>
+    <string name="bus_station">BUS STATION</string>
+    <string name="cafe">CAFE</string>
+    <string name="car_wash">CAR WASH</string>
+    <string name="gas_station">GAS STATION</string>
+    <string name="pharmacy">PHARMACY</string>
+    <string name="restaurant">RESTAURANT</string>
+    <string name="shop">SHOP</string>
+    <string name="taxi_station">TAXI STATION</string>
+    <string name="train_station">TRAIN STATION</string>
+    <string name="send">Send</string>
+    <string name="share">Share</string>
+    <string name="restore">Restore</string>
+    <string name="unarchive">Unarchive</string>
+    <string name="delete">Delete</string>
+    <string name="bakery">BAKERY</string>
+    <string name="store">STORE</string>
+    <string name="help_logo_icon">help_logo_icon</string>
+    <string name="descriptions">Descriptions</string>
+    <string name="description_detail">Clip-It is a real-time navigation software which help to re-collect memories at right store and right place. Clip-It also work in offline, except selecting locations. We mainly focus on informing the user what are the listed items to buy when user is near to the proposed shops . No need to choose the name of a shop(also we can select a particular shop), only select the type of item to buy (medicine, store, ATMs, gas stations…) and required place.</string>
+    <string name="features">Features</string>
+    <string name="add">add_di</string>
+    <string name="_1">1.</string>
+    <string name="_1_dis">This icon in create page allow user to add new category item under selected date. User can change date by clicking date show at its right.</string>
+    <string name="_2">2.</string>
+    <string name="_2_dis">This icon shown in the home page display the nearby items and the locations, to reaches the shops.</string>
+    <string name="_3">3.</string>
+    <string name="_3_dis">Double click on marker shown in map make specify the shop.</string>
+    <string name="_4">4.</string>
+    <string name="_4_dis">Click on it to show up the locations of shops in map. Only after get the result the map will display.</string>
+    <string name="_5">5.</string>
+    <string name="_5_dis">This refresh button display when there is no data.</string>
+    <string name="_6">6.</string>
+    <string name="_6_dis">Enter the phone number with country phone id.</string>
+    <string name="help_and_support">Help and support</string>
+    <string name="developed_by">Developed By</string>
+    <string name="_developed_dis">Roval Benny\nRoyal Benny\nLija Alex\n\nStudents at SJCET,Palai,Kerala\nFeedback :</string>
+    <string name="rovalbenny_gmail_com">rovalbenny@gmail.com</string>
+    <string name="licence">LICENCE</string>
+    <string name="help">Help</string>
+    <string name="guide">Guide</string>
+</resources>

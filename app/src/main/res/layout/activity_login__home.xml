@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginDirectory.LoginHome"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/welcome_to_clip_it"
+        android:textSize="24sp"
+        android:textColor="@color/material_new_blue_strong_200"
+        android:textAlignment="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:contentDescription="@string/image_at_login"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_height="250dp"
+        android:padding="20dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/splash_icon"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/we_are_happy_to_invite_you_to_our_family"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:textColor="@color/material_new_grey_strong_100"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            />
+        <android.support.design.button.MaterialButton
+            android:id="@+id/login_to_continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/new_material_strong_blue_100"
+            app:rippleColor="@color/material_strong_blue_10_transparent"
+            app:icon="@drawable/ic_outline_forward_24px"
+            app:iconTint="@color/white"
+            android:text="@string/login_to_continue"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:textAlignment="center"
+            app:cornerRadius="4dp"
+            />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginDirectory.PhoneVerifyActivity"
+    android:background="@color/white"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/tool_bar_at_phone_verification"
+        app:navigationIcon="@drawable/ic_arrow_black"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/verification"
+        android:textSize="24sp"
+        android:textColor="@color/material_new_blue_strong_200"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/waiting_to_automatically_detect_an_sms"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/material_new_grey_strong_100"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:layout_gravity="center_horizontal"
+        android:progressTint="@color/material_new_blue_strong_200"
+        />
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressbar"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/edit_text_look"
+        android:backgroundTint="@color/white"
+        android:digits="0123456789"
+        android:hint="@string/star"
+        android:textSize="20sp"
+        android:textColor="@color/material_new_brown_strong_50"
+        android:layout_gravity="center_horizontal"
+        android:inputType="phone"
+        android:maxLength="6" />
+    <View
+        android:layout_width="60dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="230dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/material_new_blue_strong_200"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="250dp"
+        >
+        <ImageView
+            android:id="@+id/resend_image_at_phone_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_feedback_24px"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/resend_image"
+            android:tint="@color/material_new_grey_strong_20"
+            />
+
+        <TextView
+            android:id="@+id/resend_text_at_phone_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/resend_sms"
+            android:textColor="@color/material_new_grey_strong_20"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_gravity="end"
+                android:id="@+id/time_counter_at_phone_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1_30"
+                android:maxLength="4"
+                android:textColor="@color/material_new_grey_strong_100"
+                android:textAlignment="viewEnd"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/buttonSignIn"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="@string/next"
+        android:textAlignment="center"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/new_material_strong_blue_100"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/material_strong_grey_10"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="-4dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/monday"
+                android:textSize="7pt"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:id="@+id/parent_crad_6_text_date"
+                android:textStyle="bold"
+                android:textColor="@color/new_material_borrown_20"                />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_expand_less_black_24dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_22_oct_2018"
+                android:textSize="10pt"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:id="@+id/parent_card_for_6_text_today"
+                android:textColor="@color/material_new_brown_strong_50"
+                />
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/parent_card_for_6_chip_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="20dp"
+                            android:visibility="gone"
+                            app:chipBackgroundColor="@color/pink_secondary_color"
+                            app:chipCornerRadius="17dp"
+                            app:chipIcon="@drawable/ic_pharmacy"
+                            app:chipIconSize="20dp"
+                            app:chipStartPadding="10dp"
+                            app:chipText="Pharamcy"
+                            app:closeIconEndPadding="5dp"
+                            app:closeIconSize="17dp"
+                            app:closeIconTint="@color/black"
+                            app:iconEndPadding="3dp"
+                            app:layout_maxWidth="250dp"
+                            app:rippleColor="@color/white"
+                            app:textEndPadding="10dp"
+                            />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/parent_card_for_6_chip_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            app:chipBackgroundColor="@color/material_new_grey_lite_20"
+                            app:chipCornerRadius="17dp"
+                            app:chipIcon="@drawable/ic_outline_location_on_24px"
+                            app:chipIconSize="20dp"
+                            app:chipStartPadding="10dp"
+                            app:chipText="Bar"
+                            app:closeIconEndPadding="5dp"
+                            app:closeIconSize="17dp"
+                            app:closeIconTint="@color/black"
+                            app:iconEndPadding="3dp"
+                            app:layout_maxWidth="250dp"
+                            app:rippleColor="@color/white_opacity_20"
+                            app:textEndPadding="10dp" />
+                    </android.support.design.chip.ChipGroup>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

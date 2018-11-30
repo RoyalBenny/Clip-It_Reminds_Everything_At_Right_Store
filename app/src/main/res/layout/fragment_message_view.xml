@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".messageDirectory.MessageView"
+    android:elevation="1dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_at_message_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="20dp"
+        app:title="Message"
+        android:background="@color/material_strong_violet_50"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:elevation="6dp"
+        android:fitsSystemWindows="true"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="75dp"
+        android:elevation="4dp"
+        android:background="@drawable/toolbar_shadow"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="90dp"
+        />
+</FrameLayout>

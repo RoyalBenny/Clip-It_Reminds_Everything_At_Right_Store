@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recycler_create_card"
+    android:background="@color/material_strong_grey_10"
+    >
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:paddingTop="20dp"
+    android:layout_marginTop="10dp"
+    app:cardPreventCornerOverlap="true"
+    android:clickable="true"
+    app:strokeColor="@color/material_strong_grey_10"
+    app:strokeWidth=".5dp"
+    app:cardCornerRadius="4dp"
+    android:focusable="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/material_strong_grey_10"
+        >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_strong_grey_10"
+        >
+
+        <android.support.design.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/material_strong_grey_10"
+            >
+
+            <android.support.design.chip.Chip
+                android:id="@+id/catergory_chip_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="20dp"
+                android:visibility="visible"
+                app:chipCornerRadius="0dp"
+                app:chipBackgroundColor="@color/material_strong_grey_10"
+                app:chipIcon="@drawable/ic_pharmacy"
+                app:chipIconSize="20dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeWidth="2dp"
+                app:chipText="Category"
+                app:closeIconEndPadding="5dp"
+                app:closeIconSize="17dp"
+                app:closeIconTint="@color/black"
+                app:iconEndPadding="3dp"
+                app:layout_maxWidth="250dp"
+                app:rippleColor="@color/white_with_gray"
+                app:textEndPadding="10dp" />
+
+        </android.support.design.chip.ChipGroup>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:background="@color/material_new_brown_strong_50"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/material_strong_grey_10"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            >
+            <ImageView
+                android:contentDescription="@string/location_icon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/ic_location_on_black_24dp"
+                />
+
+            <AutoCompleteTextView
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_create_activity_background"
+                android:id="@+id/place_auto_complete_text_create"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/material_strong_grey_10"
+                android:maxLength="14"
+                android:hint="@string/place_dot"
+                android:maxLines="1"
+                android:textColorHint="@color/black"
+                android:paddingStart="1dp"
+                android:paddingEnd="0dp"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_edit_text"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/material_strong_grey_10"
+        android:minHeight="70dp"
+        android:hint="@string/items"
+        android:textAlignment="textStart"
+        android:padding="10dp"
+        android:inputType="textMultiLine|textCapWords"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/material_new_brown_strong_50"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        />
+
+</android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

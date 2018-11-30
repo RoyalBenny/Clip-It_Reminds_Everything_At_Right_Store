@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="bottom"
+    tools:context=".tabbedViewDirectory.TabbedViewBottomSheet"
+    android:background="@color/white"
+    >
+
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:background="@color/white"
+            android:elevation="4dp"
+            app:tabGravity="center"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/material_strong_grey_10_transparent"
+            app:tabIndicatorColor="@color/material_strong_blue_100"
+            app:tabIndicator="@drawable/tabview_tab_icon_background"
+            app:tabIndicatorHeight="4dp"
+            app:tabIndicatorGravity="top"
+            app:tabIconTintMode="multiply"
+            app:tabSelectedTextColor="@color/material_strong_blue_100"
+            >
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/itemTabButtom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.ActionBar.TabBar"
+                android:text="@string/items"
+                android:elevation="5dp"
+                android:icon="@drawable/selector_from_icons_in_tab_view"
+                >
+
+            </android.support.design.widget.TabItem>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/mapTabButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map"
+                android:elevation="5dp"
+                android:icon="@drawable/selector_for"
+                >
+            </android.support.design.widget.TabItem>
+
+
+        </android.support.design.widget.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/toolbar_shadow"
+
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

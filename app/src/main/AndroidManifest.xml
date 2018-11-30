@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.clipit.cliptit2">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".backgroundDirectory.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_pointer"
+        android:label="Clip-It"
+        android:roundIcon="@mipmap/ic_launcher_pointer"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,InnerclassSeparator">
+        <activity
+            android:name=".loginDirectory.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA1CikxAaLoWB6SFwQmpMCoEcqs2AC-iTE" />
+
+        <activity
+            android:name=".createDirectory.CreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recentDirectory.ViewCategory"
+            android:label=" "
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".backgroundDirectory.ForeGroundKotlin"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":my_service"
+            tools:ignore="ExportedService" />
+
+        <receiver android:name=".backgroundDirectory.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="this_alarm" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".backgroundDirectory.StopAlarmReceiver"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="this_alarm" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".pendingDirectory.PendingActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="" />
+        <activity
+            android:name=".MainActivity"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".messageDirectory.MessagingActivity"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginDirectory.PhoneVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".messageDirectory.MessageViewDetail"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginDirectory.LoginHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginDirectory.Profilecreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginDirectory.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginDirectory.InstructionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homeDirectory.ViewCatergoryMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewCategoryMainTheme" />
+        <activity
+            android:name=".settingsDirectory.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
+        <activity android:name=".helpSupport.HelpSupport"
+            android:screenOrientation="portrait"
+            />
+
+
+    </application>
+
+</manifest>

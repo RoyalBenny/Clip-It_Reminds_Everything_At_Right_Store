@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".recentDirectory.RecentFragment"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_at_recent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+        app:title="Recents"
+        android:paddingTop="20dp"
+        app:titleTextColor="@color/white"
+        android:background="@color/red_50"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="-19dp"
+        android:elevation="3dp"
+        android:background="@drawable/toolbar_shadow"
+        />
+
+
+    <ExpandableListView
+        android:id="@+id/expandable_list_view_at_recent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_strong_grey_10"
+        android:divider="@color/material_new_grey_strong_100"
+        android:childDivider="@color/white"
+        android:layout_marginTop="71dp"
+        android:descendantFocusability="afterDescendants"
+        android:groupIndicator="@null"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/material_strong_grey_10"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_at_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="6dp"
+        android:gravity="top"
+        android:fitsSystemWindows="true"
+        android:background="@color/new_material_strong_blue_100"
+        >
+        <ImageView
+            android:contentDescription="@string/category_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:src="@mipmap/ic_launcher_pointer"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clip_it"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="top"
+        android:elevation="2dp"
+        android:background="@drawable/toolbar_shadow"
+        />
+
+    <View
+        android:id="@+id/view_at_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/appBarId"
+        android:layout_gravity="bottom"
+        android:elevation="4dp"
+        android:background="@drawable/bottom_app_bar_shadow"
+        />
+
+
+
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/appBarId"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:elevation="4dp"
+        android:backgroundTint="@color/white"
+        app:fabAlignmentMode="center"
+        app:fabCradleDiameter="70dp"
+        app:fabCradleRoundedCornerRadius="2dp"
+        app:fabCradleVerticalOffset="4dp"
+        />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_outline_add_24px"
+        app:backgroundTint="@color/new_material_strong_blue_100"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appBarId"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:maxImageSize="35dp" />
+
+
+    <include layout="@layout/content_main" />
+
+    <FrameLayout
+        android:id="@+id/layout_to_use_as_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:elevation="11dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_to_use_as_message_view"
+        android:fitsSystemWindows="true"
+        android:elevation="12dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

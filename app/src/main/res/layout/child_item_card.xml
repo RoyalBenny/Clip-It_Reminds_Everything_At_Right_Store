@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/itemCardEdit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxItem"
+                style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:buttonTint="@color/material_new_brown_strong_50"
+                />
+
+            <TextView
+                android:id="@+id/item_textView_for_category_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/fever"
+                android:textColor="@color/material_new_brown_strong_50"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

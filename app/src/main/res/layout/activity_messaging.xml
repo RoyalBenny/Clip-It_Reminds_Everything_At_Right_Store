@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messageDirectory.MessagingActivity"
+    android:background="@color/white"
+    tools:menu="@menu/message_send_menu"
+    >
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar_at_message_send"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:title="Message"
+            app:titleTextColor="@color/white"
+            android:elevation="4dp"
+            android:background="@color/colorGreen600"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+            />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:elevation="-1dp"
+        android:background="@drawable/toolbar_shadow"
+
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="13dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:textSize="17sp"
+                android:padding="3dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/me"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/edit_text_look"
+                android:textSize="15sp"
+                android:textColor="@color/material_new_brown_strong_50"
+
+                />
+        </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.2dp"
+    android:background="@color/material_new_grey_strong_20"
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:backgroundTint="@color/white"
+        android:id="@+id/from_id_in_messaging_activity"
+        android:textSize="17sp"
+        />
+    <EditText
+        android:id="@+id/phoneEdit"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/enter_the_phone_number"
+        android:inputType="phone"
+        android:textColor="@color/material_new_brown_strong_50"
+        android:background="@drawable/edit_text_look"
+        />
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0dp"
+        android:background="@color/material_new_grey_strong_20"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_at_message"
+        android:textSize="17sp"
+        />
+
+
+    <EditText
+        android:id="@+id/messageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/message"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_text_look"
+        android:backgroundTint="@color/white"
+        android:textSize="16sp"
+        android:inputType="textCapWords"
+        android:textColor="@color/material_new_brown_strong_50"
+         />
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0dp"
+        android:background="@color/material_new_grey_strong_20"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="@string/items"
+            />
+
+
+    <EditText
+        android:hint="@string/items"
+        android:id="@+id/itemEditViewMessagingActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords|textMultiLine"
+        android:background="@drawable/edit_text_look"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/material_new_brown_strong_50"
+        />
+    </LinearLayout>
+
+</LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

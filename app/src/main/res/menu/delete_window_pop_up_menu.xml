@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/delete_in_delete_window"
+        android:title="@string/delete"
+        android:icon="@drawable/ic_outline_delete_24px_second"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/send_in_delete_window"
+        android:title="@string/send"
+        android:icon="@drawable/ic_outline_send_24px_second"
+        app:showAsAction="always"
+        />
+    <item
+        android:icon="@drawable/ic_outline_share_24px"
+        android:title="@string/share"
+        android:id="@+id/share_in_delete_window"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/restore_in_delete_window"
+        android:title="@string/restore"
+        android:icon="@drawable/ic_restore"
+        app:showAsAction="always"
+        />
+
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_outline_home_24px"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@drawable/ic_outline_inbox_24px"
+            android:title="@string/inbox" />
+        <item
+            android:id="@+id/nav_recent"
+            android:icon="@drawable/ic_outline_restore_24px"
+            android:title="@string/recents" />
+
+        <item
+            android:id="@+id/nav_delete"
+            android:icon="@drawable/ic_outline_delete_24px"
+            android:title="@string/delete" />
+        <item
+            android:id="@+id/nav_archive"
+            android:icon="@drawable/ic_outline_archive_24px"
+            android:title="@string/archive"
+            />
+
+
+    </group>
+
+    <item android:title="@string/more">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_outline_settings_24px"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_outline_help_outline_24px"
+                android:title="@string/help" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+
+
+</menu>

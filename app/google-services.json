@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "464480006575",
+    "firebase_url": "https://clipit-ab360.firebaseio.com",
+    "project_id": "clipit-ab360",
+    "storage_bucket": "clipit-ab360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464480006575:android:f6b555f2778b314c",
+        "android_client_info": {
+          "package_name": "com.clipit.cliptit2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464480006575-upfee93r7jf665906v5dhjrhjo3c1q5e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clipit.cliptit2",
+            "certificate_hash": "2fadb45fc53eb5366169f34fb30cf2e0c766fc3d"
+          }
+        },
+        {
+          "client_id": "464480006575-8jkt7p1bf8boqmu4qavf7jcch07rereu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clipit.cliptit2",
+            "certificate_hash": "0f2c03ac3098d33d949b77dc9dcf9b5f0b50f0ff"
+          }
+        },
+        {
+          "client_id": "464480006575-prg36621vd141945jh9mfkkeemcnmbe5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMZzWHI3WPwWgC-2rrolmDKeSysexhXaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464480006575-prg36621vd141945jh9mfkkeemcnmbe5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464480006575:android:9073575c1c91615e",
+        "android_client_info": {
+          "package_name": "com.prf.internalclipit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464480006575-65gash30138rg37usa1pl9no9f5u5mt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prf.internalclipit",
+            "certificate_hash": "2fadb45fc53eb5366169f34fb30cf2e0c766fc3d"
+          }
+        },
+        {
+          "client_id": "464480006575-57ahq73lvld0uiljctduslrtcf7iadbp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prf.internalclipit",
+            "certificate_hash": "0f2c03ac3098d33d949b77dc9dcf9b5f0b50f0ff"
+          }
+        },
+        {
+          "client_id": "464480006575-prg36621vd141945jh9mfkkeemcnmbe5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMZzWHI3WPwWgC-2rrolmDKeSysexhXaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464480006575-prg36621vd141945jh9mfkkeemcnmbe5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

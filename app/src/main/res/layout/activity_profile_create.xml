@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginDirectory.Profilecreate"
+    android:background="@color/white"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/tool_bar_at_profile"
+        app:navigationIcon="@drawable/ic_arrow_black"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/complete_profile"
+        android:textSize="24sp"
+        android:textColor="@color/material_new_blue_strong_200"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/this_is_your_first_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/material_new_grey_strong_100"
+        />
+    <ImageView
+        android:id="@+id/image_to_use_as_avatar"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="@string/profile_icon"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/user_1"
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="250dp"
+    android:layout_marginStart="5dp"
+    android:layout_gravity="center_horizontal"
+    >
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:hint="@string/name"
+        android:inputType="textCapWords"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edit_text_look"
+        android:backgroundTint="@color/white"
+        android:maxLength="20"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_new_blue_strong_200"
+
+        />
+</LinearLayout>
+
+<android.support.design.button.MaterialButton
+    android:id="@+id/sign_in_button"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:backgroundTint="@color/new_material_strong_blue_100"
+    android:text="@string/sign_in"
+    style="@style/Widget.MaterialComponents.Button"
+    android:textColor="@color/white"
+    android:textSize="17sp"
+    app:cornerRadius="4dp"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_marginBottom="20dp"
+    />
+
+</android.support.design.widget.CoordinatorLayout>

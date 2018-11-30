@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+<Spinner
+    android:layout_width="wrap_content"
+    android:minWidth="100dp"
+    android:layout_height="30dp"
+    android:layout_marginTop="80dp"
+    android:id="@+id/Spinner_for_bottom_sheet"
+    android:layout_marginStart="20dp"
+    android:elevation="16dp"
+    android:background="@color/white"
+    />
+
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_view_at_bottom_sheet"
+        android:elevation="15dp"
+        />
+
+</FrameLayout>
