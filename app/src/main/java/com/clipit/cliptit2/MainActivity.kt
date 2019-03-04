@@ -26,13 +26,10 @@ import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.design.bottomappbar.BottomAppBar
 import android.support.design.widget.NavigationView
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -67,25 +64,15 @@ var number = 0
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-        super.onCreate(savedInstanceState)
+      super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(appBarId)
         val mAuth = FirebaseAuth.getInstance()
         con = this
-        if(android.os.Build.VERSION.SDK_INT >= 23){
-            val windows : Window = this.window
-            windows.statusBarColor  = this.getColor(R.color.material_new_brown_strong_10_transparent)
-        }
         if(mAuth.currentUser!=null) {
             val registerFBWorks = RegisterFBWorks()
             registerFBWorks.checkUserPresentInRegister(this)
         }
-
-
-
-
 
 
         val sharedPerfeneceSettings = this.getSharedPreferences("Settings", android.content.Context.MODE_PRIVATE)
@@ -110,7 +97,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 this, drawer_layout, appBarId, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
         nav_view.setNavigationItemSelectedListener(this)
 
 
@@ -129,7 +115,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         floatingActionButton.setOnClickListener {
 
-
             val slide = Slide()
             slide.slideEdge = Gravity.BOTTOM
             slide.duration = 150
@@ -142,12 +127,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out)
             this.finish()
         }
-
-
-
-
-
-
 
     }
 
@@ -204,8 +183,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
             R.id.appbar_search -> {
-
-
 
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(R.id.layout_to_use_as_bottom_sheet,
@@ -264,6 +241,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 transaction.commit()
                 number = 1
             }
+
             R.id.nav_logout -> {
                 try {
                     val sharedPerfeneceSettings = this.getSharedPreferences("Settings",android.content.Context.MODE_PRIVATE)
@@ -281,7 +259,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 } catch (e: Exception) {
                     Toast.makeText(this, "Error Occur", Toast.LENGTH_SHORT).show()
                 }
-
             }
             R.id.nav_recent -> {
 

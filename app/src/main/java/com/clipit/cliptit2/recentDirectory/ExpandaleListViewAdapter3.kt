@@ -124,7 +124,7 @@ class ExpandableListViewAdapter3(var context: Context,private var expandableList
 
         val categoryView = convertView1?.findViewById<TextView>(R.id.catergory_home_view)
         val imageView = convertView1?.findViewById<ImageView>(R.id.image_catergory_view)
-        categoryView!!.text = getChild(groupPosition, childPosition).toUpperCase()
+        categoryView!!.text = getChild(groupPosition, childPosition).replace('_',' ').toUpperCase()
         categoryView.typeface = typefaceCategory
         val category = getChild(groupPosition, childPosition)
 
@@ -191,7 +191,7 @@ class ExpandableListViewAdapter3(var context: Context,private var expandableList
 
             val categoryView1 = convertView1?.findViewById<TextView>(R.id.catergory_home_view_last_child)
             val imageView1 = convertView1?.findViewById<ImageView>(R.id.image_catergory_view_last_child)
-            categoryView1!!.text = getChild(groupPosition, childPosition).toUpperCase()
+            categoryView1!!.text = getChild(groupPosition, childPosition).replace('_',' ').toUpperCase()
             categoryView1.typeface = typefaceCategory
 
             when(category.toLowerCase()){

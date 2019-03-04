@@ -206,7 +206,7 @@ class ViewCatergoryMain : AppCompatActivity() {
         placeAutocompleteAdapter = PlaceAutocompleteAdapter(this, mGeoDataClient, latLngBounds, null)
 
 
-        category_view_text_in_ViewCategory_main.text = category!!.toUpperCase()
+        category_view_text_in_ViewCategory_main.text = category!!.replace('_',' ').toUpperCase()
 
         val imageView = findViewById<ImageView>(R.id.image_view_in_collapse_toolbar_view_at_category_view_main)
 
@@ -464,6 +464,7 @@ class ViewCatergoryMain : AppCompatActivity() {
 
             val itemViewExpand = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view)
             itemViewExpand!!.text = getChild(groupPosition,childPosition).itemName
+            itemViewExpand.typeface = typefaceItem
 
             val checkedBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem)
             checkedBox?.isChecked = childArray[groupPosition][childPosition].checked==1
@@ -485,6 +486,7 @@ class ViewCatergoryMain : AppCompatActivity() {
                 convertView1 = inflater.inflate(R.layout.last_child_for_view_category_main, null)
                 val itemViewExpand1 = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view_main_last)
                 itemViewExpand1!!.text = getChild(groupPosition, childPosition).itemName
+                itemViewExpand1.typeface = typefaceItem
 
                 val checkBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem_view_category_main_last)
                 checkBox?.isChecked = childArray[groupPosition][childPosition].checked == 1
@@ -659,8 +661,8 @@ class ViewCatergoryMain : AppCompatActivity() {
         }
 
         if(i==1){
-            i=0
-        }else {
+            i--
+        }else if (i==0) {
             itemDetailArray.clear()
         }
 

@@ -6,17 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/material_strong_grey_10"
-    android:fitsSystemWindows="true"
     >
 
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tool_bar_at_home_fragment"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="56dp"
         android:elevation="6dp"
         android:gravity="top"
-        android:fitsSystemWindows="true"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
         android:background="@color/new_material_strong_blue_100"
         >
         <ImageView

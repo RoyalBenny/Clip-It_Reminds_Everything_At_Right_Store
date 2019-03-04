@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,23 +10,34 @@
     >
 
     <ImageView
-        android:layout_marginTop="65dp"
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="350dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/image_at_flash"
         android:padding="80dp"
         android:src="@drawable/splash_icon"
-        android:contentDescription="@string/image_at_flash" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="35sp"
-        android:layout_marginBottom="60dp"
         android:layout_gravity="bottom"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/app_name"
         android:textAlignment="center"
-        android:textStyle="bold"
         android:textColor="@color/new_material_grey_50"
-        />
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
-</android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>

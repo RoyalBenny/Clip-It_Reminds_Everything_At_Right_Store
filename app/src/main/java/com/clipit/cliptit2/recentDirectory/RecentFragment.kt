@@ -44,8 +44,6 @@ class RecentFragment : Fragment() {
         val db = JsonDataBase(con)
         val data = db.returnAutoBasedOnRecent()
         val dateSet: MutableSet<String> = java.util.HashSet()
-
-
         rootView.tool_bar_at_recent.setNavigationOnClickListener {
             activity!!.onBackPressed()
         }

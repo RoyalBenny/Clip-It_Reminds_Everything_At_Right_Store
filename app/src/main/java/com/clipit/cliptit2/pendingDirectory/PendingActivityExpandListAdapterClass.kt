@@ -92,6 +92,7 @@ class PendingActivityExpandListAdapterClass(var context: Context, private var ex
 
         val itemViewExpand = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view)
         itemViewExpand!!.text = getChild(groupPosition,childPosition).itemName
+        itemViewExpand.typeface = typefaceItem
 
         val checkedBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem)
         checkedBox?.isChecked = childArray[groupPosition][childPosition].checked == 1
@@ -148,7 +149,7 @@ class PendingActivityExpandListAdapterClass(var context: Context, private var ex
             convertView1 = inflater.inflate(R.layout.last_child_at_pending_activity, null)
             val itemView = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view_main_last)
             itemView!!.text = getChild(groupPosition, childPosition).itemName
-
+            itemView.typeface = typefaceItem
             val checkBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem_view_category_main_last)
             checkBox?.isChecked = childArray[groupPosition][childPosition].checked == 1
             if(checkBox!!.isChecked||childArray[groupPosition][childPosition].checked==1){

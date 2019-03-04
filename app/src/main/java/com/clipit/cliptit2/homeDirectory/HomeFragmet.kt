@@ -19,6 +19,9 @@ Clip-It
 */
 package com.clipit.cliptit2.homeDirectory
 
+import android.content.Context
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
@@ -38,14 +41,15 @@ class HomeFragmet : Fragment() {
         val db = JsonDataBase(con)
         val data = db.returnAutoBasedOnTodayAndFurther()
         val dateSet: MutableSet<String> = java.util.HashSet()
-
-
-
         data.forEach {
 
             dateSet.add(it.date!!)
 
         }
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            activity!!.window.statusBarColor = resources.getColor(R.color.material_strong_violet_50)
+//        }
 
         val dateList: MutableList<String> = mutableListOf()
 

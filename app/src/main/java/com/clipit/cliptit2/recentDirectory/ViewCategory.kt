@@ -205,7 +205,7 @@ class ViewCategory : AppCompatActivity(){
 
 
 
-        category_view_text_in_ViewCategory.text = category!!.toUpperCase()
+        category_view_text_in_ViewCategory.text = category!!.replace('_',' ').toUpperCase()
         category_view_text_in_ViewCategory.typeface = typefaceItem
 
         val imageView = findViewById<ImageView>(R.id.image_view_in_collapse_toolbar_view_at_category_view)
@@ -475,6 +475,8 @@ class ViewCategory : AppCompatActivity(){
 
             val itemViewExpand = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view)
             itemViewExpand!!.text = getChild(groupPosition,childPosition).itemName
+            itemViewExpand.typeface = typefaceItem
+
 
             val checkedBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem)
             checkedBox?.isChecked = childArray[groupPosition][childPosition].checked==1
@@ -496,7 +498,7 @@ class ViewCategory : AppCompatActivity(){
                 convertView1 = inflater.inflate(R.layout.last_child_for_itemview_in_category_view, null)
                 val itemView = convertView1?.findViewById<TextView>(R.id.item_textView_for_category_view)
                 itemView!!.text = getChild(groupPosition, childPosition).itemName
-
+                itemView.typeface = typefaceItem
                 val checkBox = convertView1?.findViewById<CheckBox>(R.id.checkBoxItem)
                 checkBox?.isChecked = childArray[groupPosition][childPosition].checked == 1
                 if(checkBox!!.isChecked){
