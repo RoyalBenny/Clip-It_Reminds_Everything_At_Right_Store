@@ -33,15 +33,7 @@ class NearShopIndicatorClass(var context: Context, private var idArray : ArrayLi
         distanceValue = distance(number)
         val id : ArrayList<DistanceStoreClass> = arrayListOf()
 
-            arrayGlobalJson.forEach {
-                val distance = returnDistance(latLng, LatLng(it.latitude!!,it.longitude!!))
-                if(distance<=distanceValue!!){
-                    id.add(DistanceStoreClass(it.id!!, distance, it.latitude!!, it.longitude!!))
 
-                }
-
-
-            }
                 return id
 
     }
