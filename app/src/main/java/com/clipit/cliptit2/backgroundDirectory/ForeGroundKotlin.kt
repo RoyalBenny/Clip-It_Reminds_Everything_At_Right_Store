@@ -192,19 +192,7 @@ class ForeGroundKotlin : Service() {
     }
 
     override fun onDestroy() {
-        Log.e(TAG, "onDestroy")
-        GlobalForBackGround.arrayGlobalJson.clear()
-        GlobalForBackGround.arrayGlobalPlaceDetail.clear()
-        super.onDestroy()
-        if (locationManager != null) {
-            try {
-                locationManager!!.removeUpdates(locationListeners)
-            } catch (e: Exception) {
-                Log.i(TAG, "error at location update", e)
-            }
 
-
-        }
 
     }
 
