@@ -37,7 +37,16 @@ class AlarmReceiver : BroadcastReceiver() {
 
     private fun isMyServiceRunning(context: Context?, serviceClass: Class<ForeGroundKotlin>): Boolean {
         var k =0
+        val activityManager = context!!.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val service = activityManager.getRunningServices(Int.MAX_VALUE)
+        if (service.isNotEmpty()) {
+            service.forEach {
+                if (serviceClass.name == it.service.className && it.pid != 0) {
+                    k=1
+                }
+            }
 
+        }
 
         return k==1
 
