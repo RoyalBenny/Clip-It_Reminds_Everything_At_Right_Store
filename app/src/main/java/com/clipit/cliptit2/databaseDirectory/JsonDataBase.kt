@@ -251,15 +251,6 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val set = mutableSetOf<Int>()
         val query = "Select * from $deleteTableName"
         var cursor= db.rawQuery(query,null)
-        if(cursor.moveToFirst()){
-
-            do{
-
-                set.add(cursor.getInt(cursor.getColumnIndex(deleteItemIdNumberColumn)))
-
-            }while (cursor.moveToNext())
-
-        }
         cursor.close()
         set.sortedDescending().forEach {
             cursor = db.rawQuery("Select * from $deleteTableName where $deleteItemIdNumberColumn like $it",null)
