@@ -72,7 +72,18 @@ class CreateActivity : AppCompatActivity() {
 
             create_select_date_button.setOnClickListener {
 
+               val dpt = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    val selectedDate = Calendar.getInstance()
+                   selectedDate.set(Calendar.YEAR, year)
+                  selectedDate.set(Calendar.MONTH, month)
+                   selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
+                   date = dateFormat.format(selectedDate.time)
+                   create_select_date_button.text = date
+
+                }, calender.get(Calendar.YEAR), calender.get(Calendar.MONTH), calender.get(Calendar.DAY_OF_MONTH))
+                dpt.datePicker.minDate = System.currentTimeMillis()-1000
+              dpt.show()
 
             }
 
