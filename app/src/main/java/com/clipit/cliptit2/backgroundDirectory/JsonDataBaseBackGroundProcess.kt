@@ -58,16 +58,7 @@ class JsonDataBaseBackGroundProcess(val context: Context): Worker() {
         var lng = 0.0
         for(i in 0..7){
         try {
-            val data = geocoder.getFromLocationName(location, 5)
 
-            data.forEach {
-                lat = it.latitude
-                lng = it.longitude
-            }
-            val db = JsonDataBase(context)
-
-            db.updateAuto(id, shopCategory, date, shopLocation, lat, lng)
-            Thread.sleep(20)
 
         }catch (e:Exception){
         e.printStackTrace()}
