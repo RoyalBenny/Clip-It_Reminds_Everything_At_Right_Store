@@ -225,7 +225,7 @@ class ViewCatergoryMain : AppCompatActivity() {
                 imageView?.setImageResource(R.drawable.bus_station)
             }
             "bakery" -> {
-                imageView?.setImageResource(R.drawable.cafe_new)
+              //  imageView?.setImageResource(R.drawable.cafe_new)
             }
             "car_wash" -> {
                 imageView?.setImageResource(R.drawable.car_wash)
