@@ -164,28 +164,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
     fun returnIdBasedOnDateAndCate(date:String,category: String):ArrayList<ShopClass>{
         val data : ArrayList<ShopClass> =  arrayListOf()
-        val db = this.readableDatabase
-        val query = "Select * from $autoIncrementTable where $autoDateColumn like '$date' and $autoItemCategoryColumn like '$category'"
-        val cursor = db.rawQuery(query,null)
-        if(cursor.moveToFirst()){
-            do{
-                val tempAddress= ShopClass()
-                tempAddress.shopCategory = cursor.getString(cursor.getColumnIndex(autoItemCategoryColumn))
-                tempAddress.shopLocation = cursor.getString(cursor.getColumnIndex(autoShopLocation))
-                tempAddress.id = cursor.getString(cursor.getColumnIndex(autoIncrementNumber)).toInt()
-                tempAddress.date = cursor.getString(cursor.getColumnIndex(autoDateColumn))
-                tempAddress.latitude = cursor.getString(cursor.getColumnIndex(autoLatClm)).toDouble()
-                tempAddress.longitude = cursor.getString(cursor.getColumnIndex(autoLngClm)).toDouble()
-                tempAddress.delete = cursor.getInt(cursor.getColumnIndex(autoAllItemsDeleted))
-                tempAddress.archive = cursor.getInt(cursor.getColumnIndex(autoAllItemArchive))
-                tempAddress.brought = cursor.getInt(cursor.getColumnIndex(autoAllItemsBrought))
-                data.add(tempAddress)
-            }while (cursor.moveToNext())
 
-        }
-
-        cursor.close()
-        db.close()
         return data
     }
 
