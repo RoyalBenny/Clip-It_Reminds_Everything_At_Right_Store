@@ -108,9 +108,6 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
     fun insertItem(item : String,id: Int,checked :Int) :Long {
         val db = this.writableDatabase
         val cv = ContentValues()
-        cv.put(itemName,item)
-        cv.put(itemIdNumberColumn,id)
-        cv.put(itemChecked, checked)
 
 
         return db.insert(itemTableName,null,cv)
