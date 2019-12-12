@@ -115,6 +115,14 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
     fun insertDeleteItem(itemArray: MutableCollection<ItemClass>){
         val db = this.writableDatabase
+        itemArray.forEach {
+            val cv = ContentValues()
+            cv.put(deleteItemName,it.itemName)
+            cv.put(deleteItemIdNumberColumn,it.id)
+            cv.put(deleteItemChecked, it.checked)
+            db.insert(deleteTableName,null,cv)
+            db.delete(itemTableName,"$itemIdNumberColumn=? and $itemName=?", arrayOf(it.id.toString(),it.itemName))
+        }
 
         db.close()
 
