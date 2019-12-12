@@ -31,34 +31,6 @@ import android.os.Build
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        if("android.intent.action.BOOT_COMPLETED" == intent!!.action){
-            val alarm = Context.ALARM_SERVICE
-            val am = context!!.getSystemService(alarm) as AlarmManager
-            val intent2 = Intent(context, AlarmReceiver::class.java)
-            val pendingIntent = PendingIntent.getBroadcast(context, 12, intent2, 0)
-
-            am.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), 60000, pendingIntent)
-
-
-        }
-
-        if("android.intent.action.DATE_CHANGED"==intent.action){
-            if(isMyServiceRunning(context,ForeGroundKotlin::class.java)){
-                context!!.stopService(Intent(context,ForeGroundKotlin::class.java))
-            }
-      }
-
-
-        if (isMyServiceRunning(context, ForeGroundKotlin::class.java)) {
-        } else {
-            val intent2 = Intent(context, ForeGroundKotlin::class.java)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                context!!.startForegroundService(intent2)
-            }else{
-                context!!.startService(intent2)
-
-            }
-        }
 
     }
 
