@@ -98,17 +98,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val db =this.writableDatabase
         var result : Long? = null
 
-        shop.forEach {
-            val cv = ContentValues()
-            cv.put(jsonIncrementNumber,id)
-            cv.put(jsonLatColumn,it.latitude.toString())
-            cv.put(jsonLngColumn,it.longitude.toString())
-            cv.put(jsonShopNameCloumn,it.shopName)
-            cv.put(jsonSpecifiedColumn,0)
-            result = db.insert(jsonTableName,null,cv)
 
-
-        }
         db.close()
 
         return result!!
