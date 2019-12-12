@@ -82,53 +82,7 @@ class ArchiveRecyclerViewAdapterClass(val list: MutableCollection<MutableList<It
     }
 
     private fun imageFun(name: String, holder: ViewHolder) {
-        when (name.toLowerCase()) {
-            "atm" -> {
-                holder.imageView.setImageResource(R.drawable.atm)
-            }
-            "bank" -> {
-                holder.imageView.setImageResource(R.drawable.bank)
-            }
-            "bar" -> {
-                holder.imageView.setImageResource(R.drawable.bar)
-            }
-            "bus_station" -> {
-                holder.imageView.setImageResource(R.drawable.bus_station)
-            }
-            "bakery" -> {
-                holder.imageView.setImageResource(R.drawable.cafe_new)
-            }
-            "car_wash" -> {
-                holder.imageView.setImageResource(R.drawable.car_wash)
-            }
-            "gas_station" -> {
-                holder.imageView.setImageResource(R.drawable.gas_station)
-            }
-            "hospital" -> {
-                holder.imageView.setImageResource(R.drawable.hospital)
-            }
-            "pharmacy" -> {
-                holder.imageView.setImageResource(R.drawable.phramavy)
-            }
-            "restaurant" -> {
-                holder.imageView.setImageResource(R.drawable.restaurant)
-            }
-            "school" -> {
-                holder.imageView.setImageResource(R.drawable.school)
-            }
-            "store" -> {
-                holder.imageView.setImageResource(R.drawable.shops)
-            }
-            "taxi_station" -> {
-                holder.imageView.setImageResource(R.drawable.car_wash)
-            }
-            "train_station" -> {
-                holder.imageView.setImageResource(R.drawable.train_station)
-            }
-            else -> {
-                holder.imageView.setImageResource(R.drawable.cafe)
-            }
-        }
+
 
 
     }
