@@ -212,7 +212,27 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val list = ArrayList<ShopClass>()
 
         val query = "Select * from $autoIncrementTable where $autoDateColumn like '$date'"
+        val cursor= db.rawQuery(query,null)
+        if(cursor.moveToFirst()){
 
+            do{
+
+                val tempAddress= ShopClass()
+                tempAddress.shopCategory = cursor.getString(cursor.getColumnIndex(autoItemCategoryColumn))
+                tempAddress.shopLocation = cursor.getString(cursor.getColumnIndex(autoShopLocation))
+                tempAddress.id = cursor.getString(cursor.getColumnIndex(autoIncrementNumber)).toInt()
+                tempAddress.date = cursor.getString(cursor.getColumnIndex(autoDateColumn))
+                tempAddress.latitude = cursor.getString(cursor.getColumnIndex(autoLatClm)).toDouble()
+                tempAddress.longitude = cursor.getString(cursor.getColumnIndex(autoLngClm)).toDouble()
+                tempAddress.delete = cursor.getInt(cursor.getColumnIndex(autoAllItemsDeleted))
+                tempAddress.brought = cursor.getInt(cursor.getColumnIndex(autoAllItemsBrought))
+                list.add(tempAddress)
+
+            }while (cursor.moveToNext())
+
+        }
+
+        cursor.close()
         db.close()
 
         return list
