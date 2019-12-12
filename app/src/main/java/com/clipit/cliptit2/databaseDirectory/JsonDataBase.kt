@@ -154,18 +154,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val query = "Select * from $jsonTableName where $jsonIncrementNumber like $id"
         val itemArray = ArrayList<ShopClass>()
         val cursor = db.rawQuery(query,null)
-        if(cursor.moveToFirst()){
-            do{
-                val tempItem  = ShopClass()
-                tempItem.id = cursor.getString(cursor.getColumnIndex(jsonIncrementNumber)).toInt()
-                tempItem.shopName= cursor.getString(cursor.getColumnIndex(jsonShopNameCloumn))
-                tempItem.latitude = cursor.getString(cursor.getColumnIndex(jsonLatColumn)).toDouble()
-                tempItem.longitude = cursor.getString(cursor.getColumnIndex(jsonLngColumn)).toDouble()
-                tempItem.specfied = cursor.getInt(cursor.getColumnIndex(jsonSpecifiedColumn))
-                itemArray.add(tempItem)
 
-            }while (cursor.moveToNext())
-        }
         cursor.close()
         db.close()
         return itemArray
