@@ -28,10 +28,6 @@ import android.content.Intent
 class StopAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
 
-        val sharedPerfeneceSettings = context!!.getSharedPreferences("Settings", android.content.Context.MODE_PRIVATE)
-        val alarm =context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarm.cancel(PendingIntent.getBroadcast(context,12,Intent(context, AlarmReceiver::class.java),0))
-        alarm.setRepeating(AlarmManager.RTC,System.currentTimeMillis()+sharedPerfeneceSettings.getInt("Disturb",5)*60000,60000,PendingIntent.getBroadcast(context,12,Intent(context, AlarmReceiver::class.java),0))
-    }
+          }
 
 }
