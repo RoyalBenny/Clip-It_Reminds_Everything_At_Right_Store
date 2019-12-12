@@ -120,7 +120,7 @@ class ViewCatergoryMain : AppCompatActivity() {
 
 
                         val intent = Intent(this@ViewCatergoryMain, MessagingActivity::class.java)
-                       // intent.putExtra("category",category)
+                        intent.putExtra("category",category)
                         intent.putStringArrayListExtra("items",items)
                         startActivity(intent)
                         return true}

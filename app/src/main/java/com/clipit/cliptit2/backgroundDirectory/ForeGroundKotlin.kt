@@ -117,26 +117,26 @@ class ForeGroundKotlin : Service() {
                     }
 
                     intent.putExtra("idArray",idArray)
-                    val sharedPerfeneceSettings = getSharedPreferences("Settings", android.content.Context.MODE_PRIVATE)
-                    val pendingIntent = PendingIntent.getActivity(this@ForeGroundKotlin,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
-                    val builder = NotificationCompat.Builder(this@ForeGroundKotlin, CHANNEL_ID).apply {
-                        setContentIntent(pendingIntent)
-                        setSmallIcon(R.mipmap.ic_launcher_pointer)
-                        setContentTitle("Items to Buy")
-                        setContentText("Buy All!!")
-                        priority = NotificationCompat.PRIORITY_DEFAULT
-                        setChannelId(CHANNEL_ID)
-                        setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                        setOnlyAlertOnce(false)
-                        setAutoCancel(true)
-                        setVibrate(longArrayOf(100,200,300,400,500))
-                        setSound(RingtoneManager.getValidRingtoneUri(this@ForeGroundKotlin))
-                        addAction(R.color.white,"Stop Notifying for ${sharedPerfeneceSettings.getInt("Disturb",5)} min", PendingIntent.getBroadcast(this@ForeGroundKotlin,0,Intent(this@ForeGroundKotlin
-                                , StopAlarmReceiver::class.java),0))
-                    }
-                    with(NotificationManagerCompat.from(this@ForeGroundKotlin)){
-                        notify(100,builder.build())
-                    }
+//                                       val sharedPerfeneceSettings = getSharedPreferences("Settings", android.content.Context.MODE_PRIVATE)
+//                    val pendingIntent = PendingIntent.getActivity(this@ForeGroundKotlin,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+//                    val builder = NotificationCompat.Builder(this@ForeGroundKotlin, CHANNEL_ID).apply {
+//                        setContentIntent(pendingIntent)
+//                        setSmallIcon(R.mipmap.ic_launcher_pointer)
+//                        setContentTitle("Items to Buy")
+//                        setContentText("Buy All!!")
+//                        priority = NotificationCompat.PRIORITY_DEFAULT
+//                        setChannelId(CHANNEL_ID)
+//                        setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+//                        setOnlyAlertOnce(false)
+//                        setAutoCancel(true)
+//                        setVibrate(longArrayOf(100,200,300,400,500))
+//                        setSound(RingtoneManager.getValidRingtoneUri(this@ForeGroundKotlin))
+//                        addAction(R.color.white,"Stop Notifying for ${sharedPerfeneceSettings.getInt("Disturb",5)} min", PendingIntent.getBroadcast(this@ForeGroundKotlin,0,Intent(this@ForeGroundKotlin
+//                                , StopAlarmReceiver::class.java),0))
+//                    }
+//                    with(NotificationManagerCompat.from(this@ForeGroundKotlin)){
+//                        notify(100,builder.build())
+//                    }
 
 
                     stopSelf()
