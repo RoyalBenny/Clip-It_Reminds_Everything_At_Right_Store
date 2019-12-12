@@ -198,9 +198,7 @@ class ForeGroundKotlin : Service() {
 
     private fun initializeLocationManager() {
         Log.e(TAG, "initializeLocationManager")
-        if (locationManager == null) {
-            locationManager = applicationContext.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        }
+
     }
 
     companion object {
