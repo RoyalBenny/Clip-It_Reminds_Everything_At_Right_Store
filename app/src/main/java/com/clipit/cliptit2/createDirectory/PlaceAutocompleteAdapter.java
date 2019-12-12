@@ -79,12 +79,7 @@ public class PlaceAutocompleteAdapter
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
 
-                if (results != null && results.count > 0) {
-                    mResultList = (ArrayList<AutocompletePrediction>) results.values;
-                    notifyDataSetChanged();
-                } else {
-                    notifyDataSetInvalidated();
-                }
+
             }
 
             @Override
