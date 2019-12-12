@@ -219,7 +219,7 @@ class ViewCatergoryMain : AppCompatActivity() {
                 imageView?.setImageResource(R.drawable.bank)
             }
             "bar" -> {
-                imageView?.setImageResource(R.drawable.bar)
+                //imageView?.setImageResource(R.drawable.bar)
             }
             "bus_station" -> {
                 imageView?.setImageResource(R.drawable.bus_station)
