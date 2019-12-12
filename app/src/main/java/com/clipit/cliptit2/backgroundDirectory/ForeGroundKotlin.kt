@@ -57,12 +57,7 @@ class ForeGroundKotlin : Service() {
     private val notification: Notification?
         get() {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val channel = NotificationChannel("channel_01", "My Channel", NotificationManager.IMPORTANCE_HIGH)
-
-                val notificationManager = getSystemService(NotificationManager::class.java)
-                notificationManager!!.createNotificationChannel(channel)
-
-                val builder = Notification.Builder(applicationContext, "channel_01").setAutoCancel(true)
+               val builder = Notification.Builder(applicationContext, "channel_01").setAutoCancel(true)
                 builder.build()
             } else {
                 null
