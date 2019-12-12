@@ -65,12 +65,7 @@ class ArchiveRecyclerViewAdapterClass(val list: MutableCollection<MutableList<It
         }
 
 
-        holder.itemTextView.typeface = newtypefaceCategory
-        holder.itemTextView.setTextColor(context.resources.getColor(R.color.new_material_borrown_20))
-        holder.categoryTextView.text = db.returnCategoryBasedOnId(list.elementAt(position)[0].id!!)!!.toUpperCase()
-        holder.categoryTextView.typeface = newtypefaceItems
-        imageFun(db.returnCategoryBasedOnId(list.elementAt(position)[0].id!!)!!,holder)
-    }
+       }
 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -80,80 +75,6 @@ class ArchiveRecyclerViewAdapterClass(val list: MutableCollection<MutableList<It
         val imageView = itemView.findViewById<ImageView>(R.id.image_view_at_delete_card)!!
         init {
 
-            card.setOnLongClickListener {
-
-                val popupMenu = PopupMenu(con,it)
-                popupMenu.inflate(R.menu.unarchive_pop_up_menu)
-
-
-                try {
-
-
-                    val fieldPopupMenu = PopupMenu::class.java.getDeclaredField("mPopup")
-                    fieldPopupMenu.isAccessible = true
-                    val mPopupMenu = fieldPopupMenu.get(popupMenu)
-                    mPopupMenu.javaClass.getDeclaredMethod("setForceShowIcon",Boolean::class.java).invoke(mPopupMenu,true)
-                }catch (e: Exception){
-                    e.printStackTrace()
-                }finally {
-                    popupMenu.show()
-                }
-
-                popupMenu.setOnMenuItemClickListener { pi->
-                    when(pi.itemId){
-                        R.id.unarchive_in_archive_window ->{
-
-                            list.elementAt(layoutPosition).forEach {ki->
-
-                                db.restoreFromArchive(ki)
-
-                            }
-                            list.remove(list.elementAt(layoutPosition))
-                            notifyDataSetChanged()
-                            isRestored =1
-                            return@setOnMenuItemClickListener true
-                        }
-
-                        R.id.share_in_archive_window -> {
-                            var text = ""
-                            list.elementAt(layoutPosition).forEach {ki->
-                                text += ki.itemName + "\n"
-                            }
-                            val intent = Intent().apply {
-                                action = Intent.ACTION_SEND
-                                putExtra(Intent.EXTRA_TEXT, text)
-                                type = "text/plain"
-                            }
-                            context.startActivity(intent)
-                            return@setOnMenuItemClickListener true
-                        }
-                        R.id.send_in_archive_window -> {
-                            val mAuth = FirebaseAuth.getInstance()
-                            if (mAuth.currentUser==null) {
-                                val intent = Intent(context, LoginActivity::class.java)
-                                context.startActivity(intent)
-                            }
-                            else {
-
-
-                                val category = db.returnCategoryBasedOnId(list.elementAt(layoutPosition)[0].id!!)
-                                val items = ArrayList<String>()
-                                list.elementAt(layoutPosition).forEach { ki ->
-                                    items.add(ki.itemName!!)
-                                }
-                                val intent = Intent(context, MessagingActivity::class.java)
-                                intent.putExtra("category", category)
-                                intent.putStringArrayListExtra("items", items)
-                                context.startActivity(intent)
-                            }
-                            return@setOnMenuItemClickListener true
-                        }
-                    }
-                    true
-                }
-
-                return@setOnLongClickListener true
-            }
 
         }
 
