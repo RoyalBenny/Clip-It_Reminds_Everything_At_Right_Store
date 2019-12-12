@@ -133,7 +133,17 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
 
     fun restoreFromArchive(items: ItemClass){
-
+        val db = this.writableDatabase
+        db.delete(archiveTable,"$archiveItemNameColumn=? and $archiveIdColumn=?", arrayOf(items.itemName,items.id.toString()))
+        val cv = ContentValues()
+        cv.put(itemName,items.itemName)
+        cv.put(itemIdNumberColumn,items.id)
+        cv.put(itemChecked,items.checked)
+        db.insert(itemTableName,null,cv)
+        cv.clear()
+        cv.put(autoAllItemArchive,0)
+        db.update(autoIncrementTable,cv,"$autoIncrementNumber=?", arrayOf(items.id!!.toString()))
+        db.close()
 
 
     }
