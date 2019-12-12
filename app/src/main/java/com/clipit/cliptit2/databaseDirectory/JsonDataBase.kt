@@ -126,7 +126,15 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
     fun insertArchive(values: MutableCollection<ItemClass>) {
         val db = this.writableDatabase
+        values.forEach{
+            val cv = ContentValues()
+            cv.put(archiveItemNameColumn,it.itemName)
+            cv.put(archiveIdColumn,it.id)
+            cv.put(archiveCheckedColumn, it.checked)
 
+            db.insert(archiveTable,null,cv)
+            db.delete(itemTableName,"$itemIdNumberColumn=? and $itemName=?", arrayOf(it.id.toString(),it.itemName))
+        }
         db.close()
 
     }
