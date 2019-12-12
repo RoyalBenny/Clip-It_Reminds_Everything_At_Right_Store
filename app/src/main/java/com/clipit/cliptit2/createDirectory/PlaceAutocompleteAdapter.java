@@ -71,18 +71,7 @@ public class PlaceAutocompleteAdapter
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 FilterResults results = new FilterResults();
-                ArrayList<AutocompletePrediction> filterData = new ArrayList<>();
 
-                if (constraint != null) {
-                    filterData = getAutocomplete(constraint);
-                }
-
-                results.values = filterData;
-                if (filterData != null) {
-                    results.count = filterData.size();
-                } else {
-                    results.count = 0;
-                }
 
                 return results;
             }
