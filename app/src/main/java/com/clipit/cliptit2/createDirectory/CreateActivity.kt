@@ -92,7 +92,15 @@ class CreateActivity : AppCompatActivity() {
 
                 create_new_category_button.setOnClickListener {
 
+                    if(GlobalCategory.arrayGlobalCategory.lastIndex+1==3){
+                        Snackbar.make(create_new_category_button,"Reach the limit",Snackbar.LENGTH_LONG).show()
+                    }
+                    else {
 
+
+                        GlobalCategory.arrayGlobalCategory.add(ShopClass())
+                        recyclerView.adapter!!.notifyItemInserted(GlobalCategory.arrayGlobalCategory.lastIndex + 1)
+                    }
                 }
 
 
