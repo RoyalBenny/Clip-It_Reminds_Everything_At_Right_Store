@@ -39,6 +39,15 @@ class ArchiveFragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView =  inflater.inflate(R.layout.fragment_archive_, container, false)
 
+        rootView.tool_bar_at_archive.setNavigationOnClickListener {
+            activity!!.onBackPressed()
+        }
+        val data = JsonDataBase(con).viewArchive()
+
+
+        val recycler=rootView.findViewById<RecyclerView>(R.id.recyceler_view_at_archive)
+        recycler.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        recycler.adapter= ArchiveRecyclerViewAdapterClass(data.values, context!!, JsonDataBase(context!!))
 
         return rootView
 
