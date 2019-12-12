@@ -235,26 +235,6 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val today  = Calendar.getInstance().time
         val query = "Select * from $autoIncrementTable"
         val cursor= db.rawQuery(query,null)
-        if(cursor.moveToFirst()){
-
-            do{
-
-                val tempAddress= ShopClass()
-                tempAddress.date = cursor.getString(cursor.getColumnIndex(autoDateColumn))
-                tempAddress.delete = cursor.getInt(cursor.getColumnIndex(autoAllItemsDeleted))
-                tempAddress.archive = cursor.getInt(cursor.getColumnIndex(autoAllItemArchive))
-                if(dateFormat.parse(tempAddress.date)<dateFormat.parse(dateFormat.format(today)) || tempAddress.delete == 1 || tempAddress.archive == 1) continue
-                tempAddress.shopCategory = cursor.getString(cursor.getColumnIndex(autoItemCategoryColumn))
-                tempAddress.shopLocation = cursor.getString(cursor.getColumnIndex(autoShopLocation))
-                tempAddress.id = cursor.getString(cursor.getColumnIndex(autoIncrementNumber)).toInt()
-                tempAddress.latitude = cursor.getString(cursor.getColumnIndex(autoLatClm)).toDouble()
-                tempAddress.longitude = cursor.getString(cursor.getColumnIndex(autoLngClm)).toDouble()
-                tempAddress.brought = cursor.getInt(cursor.getColumnIndex(autoAllItemsBrought))
-                list.add(tempAddress)
-
-            }while (cursor.moveToNext())
-
-        }
 
         cursor.close()
         db.close()
