@@ -34,7 +34,13 @@ class App : Application() {
 
     private fun createNotification(){
 
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            val serviceChannel = NotificationChannel(CHANNEL_ID,"ClipIt Service Channel",NotificationManager.IMPORTANCE_DEFAULT)
+            val manager = getSystemService(NotificationManager::class.java)
+            manager.createNotificationChannel(serviceChannel)
 
+
+        }
 
     }
 }
