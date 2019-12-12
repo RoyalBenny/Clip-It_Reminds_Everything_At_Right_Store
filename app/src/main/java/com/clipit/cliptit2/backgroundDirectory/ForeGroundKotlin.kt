@@ -186,23 +186,23 @@ class ForeGroundKotlin : Service() {
 
     override fun onCreate() {
 
-//        db = JsonDataBase(this)
-//        val sharedPerfeneceSettings = getSharedPreferences("Settings",android.content.Context.MODE_PRIVATE)
-//        val number = sharedPerfeneceSettings.getInt("Tracking",500)
-//        GlobalForBackGround.arrayGlobalPlaceDetail.addAll(db!!.returnAutoBasedOnDate(date).filter { it.delete ==0 && it.brought == 0})
-//        nearShopIndicatorClass = NearShopIndicatorClass(this, GlobalForBackGround.arrayGlobalPlaceDetail, number)
-//
-//        Log.e(TAG, "onCreate")
-//        initializeLocationManager()
-//        try {
-//            locationManager!!.requestLocationUpdates(
-//                    LocationManager.GPS_PROVIDER, LOCATION_INTERVAL.toLong(), LOCATION_DISTANCE,
-//                    locationListeners)
-//        } catch (e: java.lang.SecurityException) {
-//            Log.i(TAG, "fail to request location update, ignore", e)
-//        } catch (e: IllegalArgumentException) {
-//            Log.d(TAG, "gps provider does not exist " + e.message)
-//        }
+        db = JsonDataBase(this)
+        val sharedPerfeneceSettings = getSharedPreferences("Settings",android.content.Context.MODE_PRIVATE)
+        val number = sharedPerfeneceSettings.getInt("Tracking",500)
+        GlobalForBackGround.arrayGlobalPlaceDetail.addAll(db!!.returnAutoBasedOnDate(date).filter { it.delete ==0 && it.brought == 0})
+        nearShopIndicatorClass = NearShopIndicatorClass(this, GlobalForBackGround.arrayGlobalPlaceDetail, number)
+
+        Log.e(TAG, "onCreate")
+        initializeLocationManager()
+        try {
+            locationManager!!.requestLocationUpdates(
+                    LocationManager.GPS_PROVIDER, LOCATION_INTERVAL.toLong(), LOCATION_DISTANCE,
+                    locationListeners)
+        } catch (e: java.lang.SecurityException) {
+            Log.i(TAG, "fail to request location update, ignore", e)
+        } catch (e: IllegalArgumentException) {
+            Log.d(TAG, "gps provider does not exist " + e.message)
+        }
 
 
 
