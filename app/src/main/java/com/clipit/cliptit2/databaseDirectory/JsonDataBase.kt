@@ -76,7 +76,30 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         var id : Int =-1
         val db = this.writableDatabase
         val cv = ContentValues()
+        cv.put(autoDateColumn,date)
+        cv.put(autoCheckedClm,checked)
+        cv.put(autoLatClm,lat)
+        cv.put(autoLngClm,lng)
+        cv.put(autoShopLocation,place)
+        cv.put(autoItemCategoryColumn,category)
+        cv.put(autoAllItemsDeleted,0)
+        cv.put(autoAllItemsBrought,0)
+        cv.put(autoAllItemArchive,0)
+        db.insert(autoIncrementTable,null,cv)
+        db.close()
+        val db2 = this.readableDatabase
+        val query = "Select * from $autoIncrementTable where  $autoShopLocation like '$place' and $autoItemCategoryColumn like '$category' and $autoDateColumn like '$date'"
+        val cursor = db2.rawQuery(query,null)
+        if(cursor.moveToFirst()){
+            do{
 
+                id = cursor.getInt(cursor.getColumnIndex(autoIncrementNumber))
+
+
+            }while (cursor.moveToNext())
+
+        }
+        cursor.close()
         db.close()
         return id
     }
