@@ -86,17 +86,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
     fun updateAuto(id:Int,category: String,date: String,location:String,lat: Double,lng: Double){
 
-        val db = this.writableDatabase
-        val cv =ContentValues()
-        cv.put(autoIncrementNumber,id)
-        cv.put(autoItemCategoryColumn,category)
-        cv.put(autoDateColumn,date)
-        cv.put(autoShopLocation,location)
-        cv.put(autoLatClm,lat)
-        cv.put(autoLngClm,lng)
-        cv.put(autoCheckedClm,0)
-        db.update(autoIncrementTable,cv,"$autoIncrementNumber=?", arrayOf(id.toString()))
-        db.close()
+
     }
 
 
