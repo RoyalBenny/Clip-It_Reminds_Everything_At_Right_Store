@@ -49,67 +49,67 @@ class JsonDataBaseBackGroundProcess(val context: Context): Worker() {
         date = inputData.getString("date")!!
         id = inputData.getString("id")!!.toInt()
 
-        val sharedPerfeneceSettings = context.getSharedPreferences("Settings",android.content.Context.MODE_PRIVATE)
-        val radius = sharedPerfeneceSettings.getInt("Searching",1000)
-        val latLng = getLocationLatLng(shopLocation)
-        val googlePlacesUrl1 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
-        googlePlacesUrl1.append("location=${latLng.latitude},${latLng.longitude}")
-        googlePlacesUrl1.append("&radius=$radius")
-        googlePlacesUrl1.append("&types=$shopCategory")
-        googlePlacesUrl1.append("&sensor=true")
-        googlePlacesUrl1.append("&key=AIzaSyA1CikxAaLoWB6SFwQmpMCoEcqs2AC-iTE")
-
-
-        val googlePlacesUrl2 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
-        googlePlacesUrl2.append("location=${latLng.latitude},${latLng.longitude}")
-        googlePlacesUrl2.append("&radius=$radius")
-        googlePlacesUrl2.append("&types=$shopCategory")
-        googlePlacesUrl2.append("&sensor=true")
-        googlePlacesUrl2.append("&key=AIzaSyBhan8NFLiB58tvEe7Ejc8nj4Y5tdyjTqI")
-
-        val googlePlacesUrl3 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
-        googlePlacesUrl3.append("location=${latLng.latitude},${latLng.longitude}")
-        googlePlacesUrl3.append("&radius=$radius")
-        googlePlacesUrl3.append("&types=$shopCategory")
-        googlePlacesUrl3.append("&sensor=true")
-        googlePlacesUrl3.append("&key=AIzaSyAPkahJmTR3Jdr_aFo_3pGLNChTsZ4XUjc")
-        if(JsonDataBase(this.context).returnJsonBasedOnId(id).isNotEmpty()) return Result.SUCCESS
-
-        try {
-            if(getJson(googlePlacesUrl1.toString())){
-            val db = JsonDataBase(this.context)
-            db.insertJson(shopArray, id)}
-            else{
-                return Result.SUCCESS
-            }
-
-        } catch (e: Exception) {
-
-            try {
-
-                if(getJson(googlePlacesUrl2.toString())){
-                    val db = JsonDataBase(this.context)
-                    db.insertJson(shopArray, id)}
-                else{
-                    return Result.SUCCESS
-                }
-
-            } catch (e: Exception) {
-
-                try {
-
-                    if(getJson(googlePlacesUrl3.toString())){
-                        val db = JsonDataBase(this.context)
-                        db.insertJson(shopArray, id)}
-                    else{
-                        return Result.SUCCESS
-                    }
-                } catch (e: Exception) {
-                    return Result.RETRY
-                }
-            }
-
-        }
+//        val sharedPerfeneceSettings = context.getSharedPreferences("Settings",android.content.Context.MODE_PRIVATE)
+//        val radius = sharedPerfeneceSettings.getInt("Searching",1000)
+//        val latLng = getLocationLatLng(shopLocation)
+//        val googlePlacesUrl1 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
+//        googlePlacesUrl1.append("location=${latLng.latitude},${latLng.longitude}")
+//        googlePlacesUrl1.append("&radius=$radius")
+//        googlePlacesUrl1.append("&types=$shopCategory")
+//        googlePlacesUrl1.append("&sensor=true")
+//        googlePlacesUrl1.append("&key=AIzaSyA1CikxAaLoWB6SFwQmpMCoEcqs2AC-iTE")
+//
+//
+//        val googlePlacesUrl2 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
+//        googlePlacesUrl2.append("location=${latLng.latitude},${latLng.longitude}")
+//        googlePlacesUrl2.append("&radius=$radius")
+//        googlePlacesUrl2.append("&types=$shopCategory")
+//        googlePlacesUrl2.append("&sensor=true")
+//        googlePlacesUrl2.append("&key=AIzaSyBhan8NFLiB58tvEe7Ejc8nj4Y5tdyjTqI")
+//
+//        val googlePlacesUrl3 = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?")
+//        googlePlacesUrl3.append("location=${latLng.latitude},${latLng.longitude}")
+//        googlePlacesUrl3.append("&radius=$radius")
+//        googlePlacesUrl3.append("&types=$shopCategory")
+//        googlePlacesUrl3.append("&sensor=true")
+//        googlePlacesUrl3.append("&key=AIzaSyAPkahJmTR3Jdr_aFo_3pGLNChTsZ4XUjc")
+//        if(JsonDataBase(this.context).returnJsonBasedOnId(id).isNotEmpty()) return Result.SUCCESS
+//
+//        try {
+//            if(getJson(googlePlacesUrl1.toString())){
+//            val db = JsonDataBase(this.context)
+//            db.insertJson(shopArray, id)}
+//            else{
+//                return Result.SUCCESS
+//            }
+//
+//        } catch (e: Exception) {
+//
+//            try {
+//
+//                if(getJson(googlePlacesUrl2.toString())){
+//                    val db = JsonDataBase(this.context)
+//                    db.insertJson(shopArray, id)}
+//                else{
+//                    return Result.SUCCESS
+//                }
+//
+//            } catch (e: Exception) {
+//
+//                try {
+//
+//                    if(getJson(googlePlacesUrl3.toString())){
+//                        val db = JsonDataBase(this.context)
+//                        db.insertJson(shopArray, id)}
+//                    else{
+//                        return Result.SUCCESS
+//                    }
+//                } catch (e: Exception) {
+//                    return Result.RETRY
+//                }
+//            }
+//
+//        }
 
         return Result.SUCCESS
     }
