@@ -31,10 +31,7 @@ class DistanceStoreClass {
     constructor( id : Int, distance :Double,latitude:Double , longitude :Double){
 
 
-        this.id = id
-        this.distance = distance
-        this.latitude = latitude
-        this.longitude = longitude
+
 
     }
     constructor()
