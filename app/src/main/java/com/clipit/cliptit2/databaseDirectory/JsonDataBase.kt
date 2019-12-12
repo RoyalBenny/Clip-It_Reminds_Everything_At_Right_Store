@@ -64,20 +64,7 @@ const val jsonSpecifiedColumn = "jsonSpecifiedColumn"
 class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBase,null,1) {
     override fun onCreate(db: SQLiteDatabase?) {
 
-        val createIncrementTable= "CREATE TABLE IF NOT EXISTS $autoIncrementTable ($autoIncrementNumber INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "$autoDateColumn VARCHAR , $autoShopLocation VARCHAR,$autoItemCategoryColumn VARCHAR,$autoCheckedClm INTEGER,$autoLatClm VARCHAR,$autoLngClm VARCHAR,$autoAllItemsBrought INTEGER,$autoAllItemsDeleted INTEGER,$autoAllItemArchive INTEGER)"
-        val createTable="CREATE TABLE IF NOT EXISTS $jsonTableName ($jsonIncrementNumber INTEGER," +
-                "$jsonLatColumn VARCHAR,$jsonLngColumn VARCHAR,$jsonShopNameCloumn VARCHAR,$jsonSpecifiedColumn INTEGER)"
-        val createItemTable = "CREATE TABLE IF NOT EXISTS $itemTableName ($itemName VARCHAR, $itemIdNumberColumn INTEGER, $itemChecked INTEGER )"
-        val createDeleteTable = "CREATE TABLE IF NOT EXISTS $deleteTableName ($deleteItemName VARCHAR, $deleteItemIdNumberColumn INTEGER, $deleteItemChecked INTEGER )"
-        val createArchiveTable = "CREATE TABLE IF NOT EXISTS $archiveTable ($archiveItemNameColumn VARCHAR, $archiveIdColumn INTEGER, $archiveCheckedColumn INTEGER )"
-        val createImageTable = "CREATE TABLE IF NOT EXISTS $imageTable ($imageNameColumn VARCHAR, $imageColumn BLOB)"
-        db?.execSQL(createTable)
-        db?.execSQL(createItemTable)
-        db?.execSQL(createDeleteTable)
-        db?.execSQL(createArchiveTable)
-        db?.execSQL(createImageTable)
-        db?.execSQL(createIncrementTable)
+
 
     }
 
