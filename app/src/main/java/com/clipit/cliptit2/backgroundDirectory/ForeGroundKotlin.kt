@@ -144,7 +144,7 @@ class ForeGroundKotlin : Service() {
 
             } else
             {
-                GlobalForBackGround.arrayGlobalJson.clear()
+             //   GlobalForBackGround.arrayGlobalJson.clear()
             }
 
         }
