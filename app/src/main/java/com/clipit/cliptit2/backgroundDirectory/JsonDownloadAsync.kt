@@ -39,38 +39,6 @@ class JsonDownloadAsync(var date:String, val context: Context, private var case:
         var i =0
 
 
-        GlobalCategory.returnGlobalCategory().forEach{
-
-            val db = JsonDataBase(context)
-            if(it.shopLocation==null || it.shopCategory==null) {
-                i++
-                return@forEach}
-            val id = db.insertAutoNew(date,it.shopLocation!!,it.shopCategory!!,0.0,0.0,0)
-
-            val workData:Data  = mapOf("location" to it.shopLocation,"category" to it.shopCategory ,"date" to date,"id" to id.toString()).toWorkData()
-            val constraints = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
-            val background = OneTimeWorkRequest.Builder(JsonDataBaseBackGroundProcess::class.java).setConstraints(constraints).setInputData(workData).build()
-            WorkManager.getInstance().enqueue(background)
-            if(case == 1) {
-                itemName2[i].split('\n').forEach { pi ->
-                    db.insertItem(pi, id, 0)
-
-
-
-                }
-            }else {
-
-                itemName3[i].split('\n').forEach { pi ->
-                    db.insertItem(pi, id, 0)
-
-
-                }
-            }
-
-
-            i++
-        }
-
 
 
 
