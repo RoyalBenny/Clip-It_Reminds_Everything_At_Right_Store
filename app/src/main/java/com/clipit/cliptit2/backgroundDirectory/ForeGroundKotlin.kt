@@ -80,7 +80,72 @@ class ForeGroundKotlin : Service() {
         }
 
         override fun onLocationChanged(location: Location) {
+            Log.e(TAG, "onLocationChanged: Java  $location")
+            lastLocation.set(location)
+            if(dateFormat.format(Calendar.getInstance().time) != date){
+                date = dateFormat.format(Calendar.getInstance().time)
+                GlobalForBackGround.arrayGlobalPlaceDetail.clear()
+                GlobalForBackGround.arrayGlobalPlaceDetail.addAll(db!!.returnAutoBasedOnDate(dateFormat.format(Calendar.getInstance().time)).filter { it.delete==0 && it.brought == 0})
+            }
+            placeDetailList = nearShopIndicatorClass!!.placeIndicator(LatLng(location.latitude,location.longitude)).toMutableList()
 
+            placeDetailList.forEach {
+                if(db!!.returnJsonBasedOnIdAfterFilterSpecify(it.id!!).isNotEmpty()){
+                    GlobalForBackGround.arrayGlobalJson.addAll(db!!.returnJsonBasedOnIdAfterFilterSpecify(it.id!!))
+                    return@forEach
+                }
+
+                GlobalForBackGround.arrayGlobalJson.addAll(db!!.readJsonFromId(it.id!!))
+            }
+
+
+            if(placeDetailList.isNotEmpty()){
+
+
+               shopDetailList = nearShopIndicatorClass!!.shopIndicator(LatLng(location.latitude,location.longitude), GlobalForBackGround.arrayGlobalJson)
+                if (shopDetailList!!.isNotEmpty()){
+
+                    val idArray:ArrayList<String> = ArrayList()
+                    shopDetailList!!.forEach {
+                        idArray.add(it.id!!.toString())
+
+                    }
+
+
+                    val intent = Intent(applicationContext, PendingActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+
+                    intent.putExtra("idArray",idArray)
+                                       val sharedPerfeneceSettings = getSharedPreferences("Settings", android.content.Context.MODE_PRIVATE)
+                    val pendingIntent = PendingIntent.getActivity(this@ForeGroundKotlin,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+                    val builder = NotificationCompat.Builder(this@ForeGroundKotlin, CHANNEL_ID).apply {
+                        setContentIntent(pendingIntent)
+                        setSmallIcon(R.mipmap.ic_launcher_pointer)
+                        setContentTitle("Items to Buy")
+                        setContentText("Buy All!!")
+                        priority = NotificationCompat.PRIORITY_DEFAULT
+                        setChannelId(CHANNEL_ID)
+                        setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                        setOnlyAlertOnce(false)
+                        setAutoCancel(true)
+                        setVibrate(longArrayOf(100,200,300,400,500))
+                        setSound(RingtoneManager.getValidRingtoneUri(this@ForeGroundKotlin))
+                        addAction(R.color.white,"Stop Notifying for ${sharedPerfeneceSettings.getInt("Disturb",5)} min", PendingIntent.getBroadcast(this@ForeGroundKotlin,0,Intent(this@ForeGroundKotlin
+                                , StopAlarmReceiver::class.java),0))
+                    }
+                    with(NotificationManagerCompat.from(this@ForeGroundKotlin)){
+                        notify(100,builder.build())
+                    }
+
+
+                    stopSelf()
+                }
+
+            } else
+            {
+                GlobalForBackGround.arrayGlobalJson.clear()
+            }
 
         }
 
