@@ -144,18 +144,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
         val db = this.readableDatabase
         val query = "Select * from $itemTableName where $itemIdNumberColumn like $id"
         val itemArray = ArrayList<ItemClass>()
-        val cursor = db.rawQuery(query,null)
-        if(cursor.moveToFirst()){
-            do{
-                val tempItem  = ItemClass()
-                tempItem.itemName = cursor.getString(cursor.getColumnIndex(itemName))
-                tempItem.id = cursor.getString(cursor.getColumnIndex(itemIdNumberColumn)).toInt()
-                tempItem.checked = cursor.getInt(cursor.getColumnIndex(itemChecked))
-                itemArray.add(tempItem)
 
-            }while (cursor.moveToNext())
-        }
-        cursor.close()
         db.close()
         return itemArray
     }
