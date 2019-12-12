@@ -145,37 +145,37 @@ class JsonDataBaseBackGroundProcess(val context: Context): Worker() {
     private fun getJson(googleUrl: String) : Boolean {
 
 
-        var result = ""
-        val url= URL(googleUrl)
-        val httpURLConnection: HttpURLConnection
-        httpURLConnection = url.openConnection() as HttpURLConnection
-        val inputStream = httpURLConnection.inputStream
-        val inputStreamReader = InputStreamReader(inputStream)
-        var data = inputStreamReader.read()
-        while (data > 0) {
-
-            val character = data.toChar()
-            result += character
-
-            data = inputStreamReader.read()
-        }
-        val jsonObject = JSONObject(result)
-        if(jsonObject.getString("status")=="ZERO_RESULTS") {
-            return false}
-        val base = jsonObject.getJSONArray("results")
-
-        for (i in 0..(base.length() - 1)) {
-            val lat = base.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lat").toString().toDouble()
-            val lng = base.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lng").toString().toDouble()
-            val tempShop = ShopClass()
-            tempShop.longitude = lng
-            tempShop.latitude = lat
-            tempShop.shopCategory = ""
-            tempShop.date = ""
-            tempShop.shopName = base.getJSONObject(i).getString("name").toString()
-            shopArray.add(tempShop)
-
-        }
+//        var result = ""
+//        val url= URL(googleUrl)
+//        val httpURLConnection: HttpURLConnection
+//        httpURLConnection = url.openConnection() as HttpURLConnection
+//        val inputStream = httpURLConnection.inputStream
+//        val inputStreamReader = InputStreamReader(inputStream)
+//        var data = inputStreamReader.read()
+//        while (data > 0) {
+//
+//            val character = data.toChar()
+//            result += character
+//
+//            data = inputStreamReader.read()
+//        }
+//        val jsonObject = JSONObject(result)
+//        if(jsonObject.getString("status")=="ZERO_RESULTS") {
+//            return false}
+//        val base = jsonObject.getJSONArray("results")
+//
+//        for (i in 0..(base.length() - 1)) {
+//            val lat = base.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lat").toString().toDouble()
+//            val lng = base.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lng").toString().toDouble()
+//            val tempShop = ShopClass()
+//            tempShop.longitude = lng
+//            tempShop.latitude = lat
+//            tempShop.shopCategory = ""
+//            tempShop.date = ""
+//            tempShop.shopName = base.getJSONObject(i).getString("name").toString()
+//            shopArray.add(tempShop)
+//
+//        }
         return true
 
 
