@@ -224,13 +224,7 @@ class JsonDataBase (val context :Context) : SQLiteOpenHelper(context, jsonDataBa
 
     fun updateItemTableWhenChecked(id:Int,item:String,checked: Int){
 
-        val db = this.writableDatabase
-        val cv = ContentValues()
-        cv.put(itemIdNumberColumn,id)
-        cv.put(itemName,item)
-        cv.put(itemChecked,checked)
-        db.update(itemTableName,cv,"$itemIdNumberColumn=? and $itemName=?", arrayOf(id.toString(),item))
-        db.close()
+
 
     }
 
