@@ -102,7 +102,7 @@ class ForeGroundKotlin : Service() {
             if(placeDetailList.isNotEmpty()){
 
 
-                shopDetailList = nearShopIndicatorClass!!.shopIndicator(LatLng(location.latitude,location.longitude), GlobalForBackGround.arrayGlobalJson)
+            //    shopDetailList = nearShopIndicatorClass!!.shopIndicator(LatLng(location.latitude,location.longitude), GlobalForBackGround.arrayGlobalJson)
                 if (shopDetailList!!.isNotEmpty()){
 
                     val idArray:ArrayList<String> = ArrayList()
