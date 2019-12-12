@@ -58,7 +58,14 @@ class CreateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_create_new_)
         setSupportActionBar(toolbar_create)
+        if(android.os.Build.VERSION.SDK_INT >= 23){
+            val windows : Window = this.window
+            windows.statusBarColor  = this.getColor(R.color.material_new_brown_strong_10_transparent)
+        }
 
+        toolbar_create.setNavigationOnClickListener {
+           onBackPressed()
+        }
 
         val dateFormat = java.text.SimpleDateFormat("dd-MMM-yyyy", Locale.US)
         val calender = Calendar.getInstance()
