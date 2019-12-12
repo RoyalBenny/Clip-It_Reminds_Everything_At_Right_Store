@@ -144,7 +144,7 @@ class ForeGroundKotlin : Service() {
 
             } else
             {
-                GlobalForBackGround.arrayGlobalJson.clear()
+               GlobalForBackGround.arrayGlobalJson.clear()
             }
 
         }
@@ -169,6 +169,13 @@ class ForeGroundKotlin : Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         Log.e(TAG, "onStartCommand")
+        super.onStartCommand(intent, flags, startId)
+        initializeLocationManager()
+        val notificationIntent = Intent(this, MainActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
+        val notification = NotificationCompat.Builder(this, "clipItApplication").setContentTitle("Clip It")
+                .setContentText("Give notification when you  reach the location")
+                .setContentIntent(pendingIntent).build()
 
 
 
