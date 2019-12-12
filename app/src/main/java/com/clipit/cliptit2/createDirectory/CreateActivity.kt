@@ -117,13 +117,6 @@ class CreateActivity : AppCompatActivity() {
         }
 
 
-        view_at_create_bottom_app_bar.startAnimation(AnimationUtils.loadAnimation(this,R.anim.bottom_app_bar_disappear))
-        create_bottom_app_bar.startAnimation(AnimationUtils.loadAnimation(this,R.anim.bottom_app_bar_disappear))
-
-        val intent = Intent(applicationContext, MainActivity::class.java)
-        startActivity(intent)
-        this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out)
-        super.onBackPressed()
 
 
     }
